@@ -95,7 +95,7 @@ nav {
 /* =================== RESPONSIVE NAVBAR =================== */
 @media (max-width: 768px) {
   nav, .nav-links {
-    background-color: #2c3e50 !important; /* dark background */
+    background: linear-gradient(45deg, #2c3e50, #3498db) !important; /* gradient for mobile */
   }
   .nav-container { justify-content: flex-end; }
   .hamburger { display: flex; }
@@ -106,7 +106,7 @@ nav {
     top: 80px;
     left: 0;
     width: 100vw;
-    background: #2c3e50 !important;
+    background: linear-gradient(45deg, #2c3e50, #3498db) !important;
     gap: 2rem;
     padding: 2rem 0;
     transform: translateY(-120%);
@@ -128,20 +128,23 @@ nav {
     border-radius: 12px;
     margin: 0;
     padding: 1rem 2rem;
-    color: #fff /* white text */
+    color: #ffffff; /* white text on gradient */
   }
   .nav-links a:hover {
-    background-color: rgba(52, 152, 219, 0.15);
-    color: #3498db !important;
+    background-color: rgba(255,255,255,0.12);
+    color: #ffffff !important;
     transform: translateY(-2px);
   }
+
+  /* Ensure hamburger bars remain visible on gradient */
+  .hamburger span { background: #ffffff; }
 }
 
 /* 480px adjustments */
 @media (max-width: 480px) {
   nav { height: 60px; }
   .nav-links { top: 60px; gap: 1.2rem; }
-  .hamburger { width: 28px; height: 28px; gap: 4px; }
+  .hamburger { width: 28px; height: 28px; gap: 4px; margin-right: 10px;}
   .nav-links a { font-size: 16px; }
   body { padding-top: 60px; }
 }
@@ -226,9 +229,21 @@ nav {
   margin: 0 1rem;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 .social-links a:hover { color: #ecf0f1; }
+.social-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ecf0f1;
+  transition: width 0.3s ease;
+}
+.social-links a:hover::after { width: 100%; }
 
 /* =================== MOBILE HERO PHOTO AT TOP ================ */
 .mobile-profile { display: none; }
@@ -340,11 +355,7 @@ section#projects { padding-top: 2rem; padding-bottom: 3rem; }
   transition: width 0.3s ease;
 }
 .project-links a:hover::after { width: 100%; }
-.project-card:last-child {
-  grid-column: 1 / -1;
-  max-width: 500px;
-  margin: 0 auto;
-}
+
 
 /* =================== CONTACT SECTION =================== */
 section#contact { padding-top: 2rem; padding-bottom: 3rem; }
@@ -520,6 +531,15 @@ footer {
         <h2>Featured Projects</h2>
       </div>
       <div class="projects-grid">
+         <div class="project-card">
+          <div class="project-content">
+            <h3><a href="https://github.com/sriram0328/Sahayak_AI" target="_blank">Sahayak.AI</a></h3>
+            <p>An AI co-teacher web app that automates classroom tasks, generates teaching materials through a voice-first interface, and is powered by Google Gemini with a Next.js + React stack.</p>
+             <div class="project-links">
+              <a href="https://github.com/sriram0328/Sahayak_AI" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
         <div class="project-card">
           <div class="project-content">
             <h3><a href="https://github.com/sriram0328/AIStoryGenerator" target="_blank">AI-Powered Story Generator</a></h3>
