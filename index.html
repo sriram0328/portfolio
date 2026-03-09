@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Professional portfolio of Sriram Ramanadham - AI Developer, Web Developer, and UI/UX Designer" />
+  <meta name="description" content="Professional portfolio of Sriram Ramanadham - Web Developer and UI/UX Designer" />
   <title>Sriram Ramanadham | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -447,6 +447,58 @@ footer {
     margin-bottom: 12px;
   }
 }
+
+/* =================== UI DESIGN SECTION =================== */
+section#ui-designs { padding-top: 2rem; padding-bottom: 3rem; }
+
+.ui-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:2rem;
+}
+
+@media (max-width:768px){
+  .ui-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.hero-buttons{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+}
+.resume-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  background:#ffffff;
+  color:#2c3e50;
+
+  padding:12px 22px;
+  border-radius:30px;
+
+  font-weight:600;
+  font-size:0.95rem;
+
+  text-decoration:none;
+
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+
+  transition:all 0.3s ease;
+}
+
+.resume-btn i{
+  font-size:14px;
+}
+
+.resume-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  background:#f8f9fa;
+}
+
   </style>
 </head>
 <body>
@@ -461,6 +513,7 @@ footer {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#ui-designs">UI/UX Designs</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -474,17 +527,28 @@ footer {
         <img src="sriram.jpg" alt="Sriram Ramanadham" class="profile-image" />
       </div>
       <div class="hero-left">
-        <h1>Sriram Ramanadham</h1>
-        <span id="typing"></span>
-        <p>
-          I'm a passionate technologist focused on building intelligent AI-powered solutions and crafting modern, user-centric web experiences. My expertise lies at the intersection of artificial intelligence and creative design, where I leverage cutting-edge technologies to solve complex real-world challenges.
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/sriram0328" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/sriram-ramanadham-66827628b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sriramramanadham355@gmail.com" target="_blank" rel="noopener"><i class="fas fa-envelope"></i> Email</a>
-        </div>
-      </div>
+  <h1>Sriram Ramanadham</h1>
+
+  <span id="typing"></span>
+
+  <p>
+    AI and Machine Learning student focused on building practical AI applications, web platforms, and mobile apps.
+    I enjoy turning ideas into working systems using Python, modern web technologies, and real-world machine learning models.
+  </p>
+
+  <div class="social-links">
+    <a href="https://github.com/sriram0328" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/sriram-ramanadham-66827628b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="mailto:sriramramanadham355@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+  </div>
+
+  <div class="hero-buttons">
+    <a href="Sriram_Resume.pdf" download class="resume-btn">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+
+</div>
       <!-- Desktop photo on right (hidden on mobile) -->
       <div>
         <img src="sriram.jpg" alt="Sriram Ramanadham" class="profile-image" />
@@ -493,36 +557,43 @@ footer {
   </section>
   <br>
 
-  <section id="skills">
-    <div class="container">
-      <div class="section-title">
-        <h2>Skills</h2>
-        <br><br>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <i class="fas fa-brain fa-2x"></i>
-          <h3>Machine Learning & AI</h3>
-          <p>Experience building intelligent applications using deep learning, computer vision, and NLP.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-python fa-2x"></i>
-          <h3>Python Development</h3>
-          <p>Proficient in backend logic, model development, and data handling with Flask, Streamlit, and more.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-code fa-2x"></i>
-          <h3>Web Development</h3>
-          <p>Developing responsive and dynamic web applications with HTML, CSS, JavaScript, and APIs.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-paint-brush fa-2x"></i>
-          <h3>UI/UX Design</h3>
-          <p>Designing clean and user-friendly interfaces with attention to accessibility and aesthetics.</p>
-        </div>
-      </div>
+<section id="skills">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Skills</h2>
     </div>
-  </section>
+
+    <div class="skills-grid">
+
+      <div class="skill-item">
+        <i class="fas fa-brain"></i>
+        <h3>Artificial Intelligence & ML</h3>
+        <p>Building intelligent systems using machine learning, computer vision, and natural language processing.</p>
+      </div>
+
+      <div class="skill-item">
+        <i class="fab fa-python"></i>
+        <h3>Python & Backend Development</h3>
+        <p>Developing backend systems and AI pipelines using Python, Flask, Streamlit, Pandas, NumPy, and OpenCV.</p>
+      </div>
+
+      <div class="skill-item">
+        <i class="fas fa-code"></i>
+        <h3>Web Development & UI/UX</h3>
+        <p>Designing and developing modern interfaces using HTML, CSS, JavaScript, React, and Figma.</p>
+      </div>
+
+      <div class="skill-item">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile App Development</h3>
+        <p>Building cross-platform mobile applications using Flutter, Firebase, and real-time data systems.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
   <br><br><br><br><br>
   <section id="projects">
@@ -531,6 +602,14 @@ footer {
         <h2>Featured Projects</h2>
       </div>
       <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3><a href="https://github.com/sriram0328/SBAS_unified_app" target="_blank">Smart Barcode Attendance System (SBAS)</a></h3>
+            <p>A barcode-driven attendance platform built with Flutter and Firebase that enables instant attendance capture, role-based access, and real-time academic reporting.</p>            <div class="project-links">
+              <a href="https://github.com/sriram0328/SBAS_unified_app" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>  
          <div class="project-card">
           <div class="project-content">
             <h3><a href="https://github.com/sriram0328/Sahayak_AI" target="_blank">Sahayak.AI</a></h3>
@@ -558,19 +637,68 @@ footer {
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-content">
-            <h3><a href="https://github.com/sriram0328/InstaUI" target="_blank">Instagram UI Design Clone</a></h3>
-            <p>A front-end clone of Instagram built using HTML, CSS, and JavaScript. Replicates the layout and responsiveness of Instagram’s modern user interface.</p>
-            <div class="project-links">
-              <a href="https://github.com/sriram0328/InstaUI" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
     
+<section id="ui-designs">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>UI / UX Designs</h2>
+    </div>
+
+    <div class="ui-grid">
+
+        <div class="project-card">
+        <div class="project-content">
+          <h3>
+            <a href="https://www.figma.com/design/4YV2EqNFjaINcNHjlMGXXr/SBAS" target="_blank">
+              SBAS Mobile Application UI Design
+            </a>
+          </h3>
+
+          <p>
+            A mobile UI/UX prototype for the Smart Barcode Attendance System designed in Figma,
+            featuring barcode attendance workflows, role-based dashboards, and intuitive navigation
+            for academic attendance management.
+          </p>
+
+          <div class="project-links">
+            <a href="https://www.figma.com/design/4YV2EqNFjaINcNHjlMGXXr/SBAS" target="_blank">
+              <i class="fab fa-figma"></i> Design
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+  <div class="project-content">
+    <h3>
+      <a href="https://www.figma.com/design/RnPHVTjZQRb5jJjkec0IUo/Instagram-?t=HAGnscmTAytXjuwJ-0" target="_blank">
+        Instagram Mobile UI Design
+      </a>
+    </h3>
+
+    <p>
+      A mobile UI/UX design inspired by Instagram, created in Figma. Focused on
+      clean layout structure, intuitive navigation patterns, and replicating
+      modern social media interface design principles.
+    </p>
+
+    <div class="project-links">
+      <a href="https://www.figma.com/design/RnPHVTjZQRb5jJjkec0IUo/Instagram-?t=HAGnscmTAytXjuwJ-0" target="_blank">
+        <i class="fab fa-figma"></i> Design
+      </a>
+    </div>
+  </div>
+</div>
+
+      
+
+  </div>
+</section>
+
   <section id="contact">
     <div class="container">
       <div class="section-title">
@@ -593,7 +721,7 @@ footer {
     </div>
   </section>
   <footer>
-    &copy; 2025 Sriram Ramanadham. All rights reserved.
+    &copy; 2026 Sriram Ramanadham. All rights reserved.
   </footer>
 
   <script>
@@ -612,7 +740,7 @@ footer {
     });
 
     // Typing effect
-    const words = ["AI Developer", "Web Developer", "UI/UX Designer"];
+    const words = ["Web Developer", "UI/UX Designer", "Mobile App Developer", "AI Enthusiast"];
     let i = 0, j = 0;
     let currentWord = '';
     let isDeleting = false;
